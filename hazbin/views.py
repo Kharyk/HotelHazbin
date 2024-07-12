@@ -5,11 +5,28 @@ from django.contrib import messages
 from .models import Registration
 from .forms import RegistrationForm
 
-# Registration Views
 
+
+def homepage(request):
+    return render(request, 'homepage.html')
+
+def createpage(request):
+    return render(request, 'create.html')
+
+def deletepage(request):
+    return render(request, 'delete.html')
+
+def listpage(request):
+    return render(request, 'registration_list.html')
+
+def updatepage(request):
+    return render(request, "update.html")
+    
+    # Registration Views
+"""
 class RegistrationListView(LoginRequiredMixin, ListView):
     model = Registration
-    template_name = 'registrations/list.html'
+    template_name = 'registrations/registration_list.html'
     context_object_name = 'registrations'
 
 class RegistrationCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
@@ -46,7 +63,6 @@ class RegistrationDeleteView(LoginRequiredMixin, PermissionRequiredMixin, Delete
     def delete(self, request, *args, **kwargs):
         messages.success(request, self.success_message)
         return super().delete(request, *args, **kwargs)
+"""
 
 
-def homepage(request):
-    return render(request, 'homepage.html')

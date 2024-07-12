@@ -17,12 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hazbin import views
+from django.conf.urls.static import static
+
+from . import settings 
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),  
     path('admin/', admin.site.urls),
-    path('registrations/', views.RegistrationListView.as_view(), name='registration_list'),
+    path('create/', views.createpage, name= "createpage"),
+    path("delete/", views.deletepage, name= "deletepage"),
+    path("update/", views.updatepage, name= "updatepage"),
+    path('list/', views.listpage, name= 'listpage'),
+
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+
+''' path('registrations/', views.RegistrationListView.as_view(), name='registration_list'),
     path('registrations/create/', views.RegistrationCreateView.as_view(), name='registration_create'),
     path('registrations/<pk>/update/', views.RegistrationUpdateView.as_view(), name='registration_update'),
-    path('registrations/<pk>/delete/', views.RegistrationDeleteView.as_view(), name='registration_delete'),
-]
+    path('registrations/<pk>/delete/', views.RegistrationDeleteView.as_view(), name='registration_delete'),'''

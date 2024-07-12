@@ -1,0 +1,23 @@
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .logo-container h1 {
+    margin-right: 100px; 
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  body {
+    background-image: url("../images/wallpaper.JPG");
+    background-repeat: no-repeat;
+  }
