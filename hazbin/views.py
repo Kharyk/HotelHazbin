@@ -5,23 +5,68 @@ from django.contrib import messages
 from .models import Registration
 from .forms import RegistrationForm
 
+from django.contrib.auth.decorators import login_required, permission_required
 
 
+@login_required
 def homepage(request):
     return render(request, 'homepage.html')
 
+@login_required
+@permission_required('can_add_registration')
 def createpage(request):
-    return render(request, 'create.html')
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Registration created successfully!')
+            return redirect('listpage')
+    else:
+        form = RegistrationForm()
+    return render(request, 'create.html', {'form': form})
 
-def deletepage(request):
-    return render(request, 'delete.html')
+@login_required
+@permission_required('can_delete_registration')
+def deletepage(request, pk):
+    Registration.objects.get(pk=pk).delete()
+    messages.success(request, 'Registration deleted successfully!')
+    return redirect('listpage')
 
+@login_required
 def listpage(request):
-    return render(request, 'registration_list.html')
+    registrations = Registration.objects.all()
+    return render(request, 'egistration_list.html', {'registrations': registrations})
 
-def updatepage(request):
-    return render(request, "update.html")
-    
+@login_required
+@permission_required('can_change_registration')
+def updatepage(request, pk):
+    registration = Registration.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST, instance=registration)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Registration updated successfully!')
+            return redirect('listpage')
+    else:
+        form = RegistrationForm(instance=registration)
+    return render(request, 'update.html', {'form': form})
+
+@login_required
+def logpage(request):
+    return render(request, 'log.html')
+
+@login_required
+
+def register(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Registration created successfully!')
+            return redirect('listpage')
+    else:
+        form = RegistrationForm()
+    return render(request, 'egister.html', {'form': form})
     # Registration Views
 """
 class RegistrationListView(LoginRequiredMixin, ListView):
