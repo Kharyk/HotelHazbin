@@ -13,24 +13,45 @@ def homepage(request):
     return render(request, 'homepage.html')
 
 @login_required
-def createpage(request):
-    return render(request, "create.html")
-    
-@login_required
 def logpage(request):
     return render(request, "log.html")
 
 @login_required
+def createpage(request):
+    return render(request, "for_user/create.html")
+
+@login_required
 def registerpage(request):
-    return render(request, "register.html")
+    return render(request, "for_user/register.html")
 
 @login_required
 def hotelroomspage(request):
-    return render(request, 'hotelrooms.html')
+    return render(request, 'for_user/hotelrooms.html')
 
 @login_required
 def deletepage(request):
-    return render(request, "delete.html")
+    return render(request, "for_user/delete.html")
+
+
+def addadmin(request):
+    return render(request, "for_admin/addadmin.html")
+
+def schedule(request):
+    return render(request, "for_admin/schedule.html")
+
+def registlist(request):
+    return render(redirect, "for_admin/registration_list.html")
+
+
+
+
+
+
+
+
+
+
+
 
 
 """@permission_required('can_add_registration')

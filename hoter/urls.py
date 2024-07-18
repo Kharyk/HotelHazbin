@@ -29,6 +29,10 @@ urlpatterns = [
     path("registration/", views.registerpage, name= "register"),
     path("hotelrooms/", views.hotelroomspage, name= "hotelrooms"),
     path("delete/", views.deletepage, name="delete"),
+    
+    path("admin-add/", views.addadmin, name="addadmin"),
+    path("admin-schadule/", views.schedule, name="schadule"),
+    path("admin-register-list/", views.registlist, name="register-list"),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 

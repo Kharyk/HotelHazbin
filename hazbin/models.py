@@ -1,8 +1,13 @@
 from django.db import models
 
 class Client(models.Model):
+    ACCOUNT_TYPES = (
+        ('personal', 'Personal'),
+        ('business', 'Business'),
+    )
     name = models.CharField(max_length=100)
     email = models.EmailField()
+    account_type = models.CharField(max_length=10, choices=ACCOUNT_TYPES, default='personal')
 
 class Administration(models.Model):
     name = models.CharField(max_length=100)
