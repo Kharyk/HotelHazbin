@@ -1,3 +1,5 @@
 # Hotel
 
-![image](https://github.com/Kharyk/HotelHazbin/assets/131535513/56769878-9433-4590-857a-45c86d3c63e4)
+![image](https://github.com/user-attachments/assets/3977aa14-310a-433c-8eb6-a5e46ac36b20)
+
+
