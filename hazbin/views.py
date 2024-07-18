@@ -13,7 +13,27 @@ def homepage(request):
     return render(request, 'homepage.html')
 
 @login_required
-@permission_required('can_add_registration')
+def createpage(request):
+    return render(request, "create.html")
+    
+@login_required
+def logpage(request):
+    return render(request, "log.html")
+
+@login_required
+def registerpage(request):
+    return render(request, "register.html")
+
+@login_required
+def hotelroomspage(request):
+    return render(request, 'hotelrooms.html')
+
+@login_required
+def deletepage(request):
+    return render(request, "delete.html")
+
+
+"""@permission_required('can_add_registration')
 def createpage(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
@@ -67,7 +87,13 @@ def register(request):
     else:
         form = RegistrationForm()
     return render(request, 'egister.html', {'form': form})
-    # Registration Views
+    # Registration Views """
+    
+    
+    
+    
+    
+    
 """
 class RegistrationListView(LoginRequiredMixin, ListView):
     model = Registration

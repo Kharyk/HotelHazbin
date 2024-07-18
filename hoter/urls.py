@@ -25,11 +25,11 @@ urlpatterns = [
     path('', views.homepage, name='homepage'),  
     path('admin/', admin.site.urls),
     path('create/', views.createpage, name= "createpage"),
-    path("delete/<pk>/", views.deletepage, name= "deletepage"),
-    path("update/<pk>/", views.updatepage, name= "updatepage"),
-    path('list/', views.listpage, name= 'listpage'),
     path("log/", views.logpage, name="logpage"),
-    path("register/", views.register, name= "register"),
+    path("registration/", views.registerpage, name= "register"),
+    path("hotelrooms/", views.hotelroomspage, name= "hotelrooms"),
+    path("delete/", views.deletepage, name="delete"),
+
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 
 ''' path('registrations/', views.RegistrationListView.as_view(), name='registration_list'),
