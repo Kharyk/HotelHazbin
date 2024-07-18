@@ -32,13 +32,15 @@ def hotelroomspage(request):
 def deletepage(request):
     return render(request, "for_user/delete.html")
 
-
+@login_required
 def addadmin(request):
     return render(request, "for_admin/addadmin.html")
 
+@login_required
 def schedule(request):
     return render(request, "for_admin/schedule.html")
 
+@login_required
 def registlist(request):
     return render(redirect, "for_admin/registration_list.html")
 

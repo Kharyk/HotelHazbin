@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href=" ">Home</a></li>
+                <li><a href="admin-schadule">Schadule</a></li>
+                <li><a href="admin-add">Make Account</a></li>
+                <li><a href="admin-register-list">Registration List</a></li>
+
+                <li><a href="log">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Hazbin Hotel, always welcome ^_^&copy;2024</p>
+    </footer>
+</body>
+</html>
