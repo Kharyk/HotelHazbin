@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: cyan;
+    color: #3081d2;
+    background: white url('images/wallpaper.jpg');
 }
 
 header {
     background-color: #333;
-    color: #ffffff;
+    color: #2ecff0;
     padding: 1em;
     text-align: center;
 }
@@ -25,7 +26,7 @@ nav li {
 }
 
 nav a {
-    color: #fff;
+    color: #30def5;
     text-decoration: none;
 }
 
@@ -34,8 +35,43 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 2em;
+    width: 70%; 
+    margin-left: 250px;
 }
 
 h1 {
-    color: #333;
+    color: #3081d2;
 }
+p{
+    color:#3081d2
+}
+
+.blue-header {
+    color: #3081d2;
+}
+
+.room-images {
+    float: left;
+    margin: 20px;
+}
+
+.room-images img {
+    width: 550px; 
+    height: auto; 
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #ffffff; 
+    border: none;
+    border-radius: 20px; 
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0069d9; 
+  }

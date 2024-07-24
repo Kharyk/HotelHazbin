@@ -1,13 +1,161 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Log In{% endblock %}
 
+
 {% block content %}
-    <h1>Hotel Rooms</h1>
+    <h1 class="blue-header">Hotel Rooms</h1>
     <p>Here is a list of all the rooms in the hotel.</p>
-    <!--<ul>
-        {% for room in rooms %}
-        <li>{{ room }}</li>
-        {% endfor %}
-    </ul> -->
+    <div class="room-images">
+        <div>
+            <h3>Room 2.01</h3>
+
+            <img src="{% static 'images/room_6.jpg' %}" alt="Room 1">
+
+
+            
+            <h2><strong>Lagoon of Death</strong> - A demon's paradise</h2>
+            <p>Indulge in the ultimate luxury of our Lagoon of Death room, designed specifically for our demon guests. This opulent retreat is designed to pamper your every whim and provide the ultimate experience.</p>
+            <p>The room's décor is a masterpiece of dark elegance, featuring rich red and black hues, and adorned with gold accents that shimmer like the fires of the underworld. The centerpiece of the room is a large, circular table with a plush, velvet-covered chair, perfect for plotting your next move or enjoying a decadent meal. Two blue fire candlesticks provide a warm and inviting glow, while the cabinets with gold handles offer ample storage space for all your demonic needs.</p> 
+            <p>A large mirror allows you to admire your sinister reflection, while a large, heart-shaped window offers a breathtaking view of the city below. A luxurious rug covers the floor, adding an extra touch of comfort and opulence to the room.</p> 
+            <ul> 
+                <li>Circular table with plush chair</li> 
+                <li>Blue fire candlesticks</li> 
+                <li>Cabinets with gold handles</li> 
+                <li>Large mirror</li> 
+                <li>Heart-shaped window</li> 
+                <li>Luxurious rug</li> 
+            </ul> 
+            <p>So, if you're ready to indulge in the ultimate luxury and experience the best that the Hazbin Hotel has to offer, book your stay in the Luxurious Den room today. But be warned - once you've experienced the opulence of this room, you may never want to leave...</p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+
+        </div>
+        
+
+
+        <div>
+            <h3>Room 2.02.</h3>
+
+            <img src="{% static 'images/room_2.webp' %}" alt="Room 2">
+            <h2><strong> Dragon's Lair</strong> - A Fearsome Retreat</h2>
+
+            <p>Step into the lair of a legendary beast in our Dragon's Lair room, where the boundaries between reality and fantasy blur. This fearsome retreat is designed to transport you to a world of myth and magic, where dragons roam free and heroes are made.</p>
+
+            <p>The room's décor is a testament to the power and majesty of the ancient dragons, with a <strong>dragon skeleton</strong> mounted on the wall, its bones gleaming in the flickering candlelight. The walls are adorned with rich tapestries, depicting scenes of epic battles and legendary quests.</p>
+
+            <p>But it's not all about the dragons - this room is also equipped with the finest amenities to make your stay a comfortable one. The <strong>wardrobe</strong> is stocked with a selection of fine garments, fit for a hero or a villain. The <strong>beautiful wooden table</strong> is perfect for plotting your next move, or enjoying a hearty meal.</p>
+
+            <p>And, as a special touch, our Dragon's Lair room comes with a few surprises:</p>
+
+            <ul>
+                <li>A <strong>secret compartment</strong> hidden behind a bookshelf, containing a mysterious artifact or two</li>
+                <li>A <strong>magical mirror</strong> that reveals hidden truths and ancient secrets</li>
+                <li>A <strong>collection of ancient tomes</strong> containing forbidden knowledge and forgotten spells</li>
+            </ul>
+
+            <p>This room is perfect for a <strong>single bad hero</strong>, looking to rest their weary head and plan their next move. So, if you're ready to unleash your inner dragon and embark on a quest for adventure, book your stay in the Dragon's Lair room today. But be warned - the dragons are always watching, and only the bravest of heroes will emerge victorious...</p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+        </div>
+
+
+        <div>
+            <h3>Room 2.03.</h3>
+
+            <img src="{% static 'images/room_3.jpg' %}" alt="Room 3">
+            <h2><strong> DJ's Nest</strong> - Musical temptation</h2> 
+            <p>Step into the world of music and dance in our DJ's Nest room, where the beat never stops and the party never ends. This musical retreat is designed to transport you to a world of rhythm and sound, where music is the ultimate form of expression.</p> 
+            <p>The room's décor is a celebration of music and dance, with a <strong>DJ booth</strong> in the center of the room, surrounded by a dance floor and a selection of musical instruments. The walls are adorned with posters of famous musicians and bands, and the room is filled with the sounds of music, from classical to contemporary.</p> 
+            <ul> 
+                <li>Comfortable bed for two people</li> 
+                <li>Two deer skulls mounted on the wall</li>
+                <li>Spacious dance floor</li> 
+                <li>Selection of musical instruments</li>
+                <li>Posters of famous musicians and bands</li> 
+                <li>Surround sound system</li> 
+            </ul> 
+            <p>So, if you're ready to dance the night away and immerse yourself in the world of music, book your stay in the DJ's Nest room today. But be warned - once you've experienced the musical temptation of the Hazbin Hotel, you may never want to leave...</p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+        </div>
+
+
+        <div>
+            <h3>Room 2.04</h3>
+
+            <img src="{% static 'images/room_4.jpg' %}" alt="Room 4">
+            <h2><strong> Royal Suite</strong> - A Regal Retreat</h2>
+
+            <p>Indulge in the epitome of luxury in our Royal Suite, fit for a demon king.</p>
+            <p>This opulent retreat is designed to pamper your every whim and provide the </p>
+            <p>ultimate Hazbin Hotel experience.</p>
+
+            <p>The room's décor is a masterpiece of dark elegance, featuring rich red and black hues,</p>
+            <p>and adorned with gold accents that shimmer like the fires of the underworld. The plush </p>
+            <p> King-size bed, shrouded in velvet curtains, beckons you to surrender to its comfort.</p>
+
+            <p>But that's not all - this suite also features:</p>
+            <ul>
+                <li>A spacious living area with a comfortable sofa and armchair, perfect for lounging and plotting your next move.</li>
+                <li>A fully stocked minibar, featuring a selection of fine wines and spirits, to indulge your dark desires.</li>
+                <li>A private balcony with a stunning view of the city, perfect for brooding or summoning dark powers.</li>
+                <li>A walk-in closet with ample space to store your darkest attire.</li>
+                <li>A marble-lined bathroom with a separate shower and tub, perfect for washing away your sins.</li>
+                <li>And, as a special touch, our Royal Suite comes with a personalized demon butler service, dedicated to catering to your every whim and ensuring that your stay is nothing short of infernal.</li>
+
+            </ul>
+
+            <p>So, if you're ready to live like a demon king, book your stay in the Royal Suite today.</p>
+            <p>But be warned - once you've experienced the luxury of the Hazbin Hotel, you may never want to leave...</p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+        </div>
+
+
+        <div>
+            <h3>Room 3.05.</h3>
+
+            <img src="{% static 'images/room_1.webp' %}" alt="Room 5">
+            <h2><strong>Demon's Den</strong> - A Sinful Retreat</h2>
+            <p>Indulge in the dark side of luxury in our <strong>Demon's Den</strong> room, where theboundaries between reality and fantasy blur.This sinful retreat is designed to tempt your senses and corrupt your soul.</p>
+            <p>The room's décor is a twisted masterpiece, featuring bold red and black hues, and adorned with demonic accents that will make you feel like you're sleeping in the lair of a fallen angel. The plush <strong>king-size bed</strong>, shrouded in crimson curtains, beckons you to surrender to its comfort.</p>
+            <p>But be warned, mortal, the amenities in this room are designed to tempt your desires. The <strong>minibar</strong> is stocked with a selection of fine wines and spirits, and the <strong>in-room entertainment system</strong> offers a range of sinful pleasures to indulge in.</p>
+            <p>So, if you're ready to live like a demon king, book your stay in the <strong>Royal Suite</strong> today. But be warned - once you've experienced the luxury of the Hazbin Hotel, you may never want to leave...</p>
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+        </div>
+
+
+        <div>
+            <h3>Room 3.06</h3>
+
+            <img src="{% static 'images/room_7.jpg' %}" alt="Room 6">
+
+
+            <h2><strong>Seductive Rose</strong> - Sharp as love</h2>
+             
+            <p>Step into the world of passion and desire in our Seductive Rose room, where the atmosphere is as sharp as love itself. This sensual retreat is designed to ignite your senses and awaken your deepest desires.</p> 
+            <p>The room's décor is a celebration of love and passion, with a bold red color palette and a selection of romantic accents. The centerpiece of the room is a large, round bed covered in red roses, inviting you to indulge in a night of passion and pleasure. A beautiful wooden table with a candle holder provides a romantic ambiance, perfect for a candlelit dinner or a glass of wine.</p> 
+            <p>A large window next to a knight's armor offers a view of the city below, while a spacious wardrobe provides ample storage space for all your belongings. Whether you're looking for a romantic getaway or a night of passion, the Seductive Rose room is the perfect choice.</p> 
+            <ul> 
+                <li>Red round bed with roses</li> 
+                <li>Beautiful wooden table with candle holder</li> 
+                <li>Window with knight's armor</li> 
+                <li>Spacious wardrobe</li> 
+            </ul> 
+            <p>So, if you're ready to ignite your senses and experience the ultimate in passion and desire, book your stay in the Seductive Rose room today. But be warned - once you've experienced the sharpness of love in this room, you may never want to leave...</p>
+
+            <p>  </p>
+            <p>  </p>
+            <p>  </p>
+
+        </div>
+    </div>
 {% endblock %}
