@@ -11,12 +11,13 @@
     <header>
         <nav>
             <ul>
-                <li><a href=" ">Home</a></li>
-                <li><a href="admin-schadule">Schadule</a></li>
-                <li><a href="admin-add">Make Account</a></li>
-                <li><a href="admin-register-list">Registration List</a></li>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'schadule' %}">Schadule</a></li>
+                <li><a href="{% url 'addadmin' %}">Make Account</a></li>
+                <li><a href="{% url 'register-list' %}">Registration List</a></li>
+                
+                <li><a href="{% url 'logpage' %}">Log In</a></li>
 
-                <li><a href="log">Log In</a></li>
             </ul>
         </nav>
     </header>

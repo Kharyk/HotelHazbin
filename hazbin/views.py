@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib import messages
-from .models import Registration
+from .models import Registration, Client
 from .forms import RegistrationForm
 
 from django.contrib.auth.decorators import login_required, permission_required
@@ -18,11 +18,23 @@ def logpage(request):
 
 @login_required
 def createpage(request):
+    if request.method== 'POST':
+        user = Client(name=request.POST.get("name"),
+               email=request.POST.get("email"),
+               account_type=request.POST.get("accounttype"))
+        user.save()
     return render(request, "for_user/create.html")
+
 
 @login_required
 def registerpage(request):
-    return render(request, "for_user/register.html")
+    if request.method=='POST':
+        regist = Registration(client = request.POST.get("username"),
+                hotelroom= request.POST.get("hotelroom"),
+                start_date_time= request.POST.get("start_datetime"),
+                end_date_time= request.POST.get("end_datetime"))
+        regist.save()
+    return render(request, "for_user/register_u.html")
 
 @login_required
 def hotelroomspage(request):
