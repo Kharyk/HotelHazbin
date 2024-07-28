@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+    <h1>Log Out</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button class="btn">
+            <a href="{% url 'homepage' %}">Log Out &raquo; Home Page</a>
+        </button> 
+
+    </form>
+{% endblock %}

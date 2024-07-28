@@ -46,6 +46,12 @@ def deletepage(request):
 
 @login_required
 def addadmin(request):
+    if request.method=='POST':
+        admin = Administration(
+            name=request.POST.get("name"),
+            email=request.POST.get("email"),
+        )
+        admin.save()
     return render(request, "for_admin/addadmin.html")
 
 @login_required
@@ -54,7 +60,15 @@ def schedule(request):
 
 @login_required
 def registlist(request):
-    return render(redirect, "for_admin/registration_list.html")
+    return render(request, "for_admin/registration_list.html")
+
+@login_required
+def logout(request):
+    return render(request, "logout.html")
+
+@login_required
+def info(request):
+    return render(request, "for_user/info.html")
 
 
 

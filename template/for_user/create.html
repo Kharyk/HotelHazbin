@@ -1,21 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 
-{% block title %}Make Account{% endblock %}
+</head>
+<body>
+    <main>
+        {% block content %}
+            <h1>Make Account</h1>
+            <form method="post">
+                {% csrf_token %}
+                <label for="name">Account Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="accounttype">Account Type:</label>
+                <select id="accounttype" name="accounttype">
+                    <option value="personal">Personal</option>
+                    <option value="business">Business</option>
+                </select><br><br>
+                <button class="btn">Submit</button>
 
-{% block content %}
-    <h1>Make Account</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="name">Account Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="accounttype">Account Type:</label>
-        <select id="accounttype" name="accounttype">
-            <option value="personal">Personal</option>
-            <option value="business">Business</option>
-        </select><br><br>
-        <button class="btn">Submit</button>
+            </form>
+        {% endblock %}
+    </main>
+    <footer>
+        <p color="red">Hazbin Hotel, always welcome ^_^&copy;2024</p>
 
-    </form>
-{% endblock %}
+    </footer>
+    
+</body>
+</html>

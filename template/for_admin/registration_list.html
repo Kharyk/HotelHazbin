@@ -1,15 +1,6 @@
-{% extends 'base_adminS.html' %}
+{% extends 'base_admin.html' %}
 
 {% block content %}
   <h1>Registrations</h1>
-  <ul>
-    {% for registration in registrations %}
-      <li>
-        {{ registration.client.name }} ({{ registration.start_date_time }} - {{ registration.end_date_time }})
-        <!--<a href="{% url 'egistration_update' registration.pk %}">Edit</a>
-        <a href="{% url 'egistration_delete' registration.pk %}">Delete</a>-->
-      </li>
-    {% endfor %}
-  </ul>
-  <!--<a href="{% url 'egistration_create' %}">Create New Registration</a> -->
+  
 {% endblock %}

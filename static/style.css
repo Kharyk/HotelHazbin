@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #333;
-    color: #2ecff0;
+    color: #00FFFF;
     padding: 1em;
     text-align: center;
 }
@@ -40,14 +40,14 @@ main {
 }
 
 h1 {
-    color: #3081d2;
+    color: #00FFFF;
 }
 p{
-    color:#3081d2
+    color:#00FFFF
 }
 
 .red-header {
-    color: #e41e1e;
+    color: #FF3737;
 }
 
 .room-images {

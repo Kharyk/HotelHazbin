@@ -1,15 +1,35 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 
-{% block title %}Log In{% endblock %}
+</head>
+<body>
+    <main>
+        {% block content %}
+        <h1>Log In</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br><br>
+            <button class="btn">
+                <a href="{% url 'hotelrooms' %}">Log In &raquo; Hotel Rooms</a>
+            </button> 
+    
+        </form>
+        {% endblock %}
+    </main>
+    <footer>
+        <p color="red">Hazbin Hotel, always welcome ^_^&copy;2024</p>
 
-{% block content %}
-    <h1>Log In</h1>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <button class="btn">Log In</button>
-
-    </form>
-{% endblock %}
+    </footer>
+    
+</body>
+</html>

@@ -25,14 +25,19 @@ urlpatterns = [
     path('', views.homepage, name='homepage'),  
     path('admin/', admin.site.urls),
     path('create/', views.createpage, name= "createpage"),
-    path("log/", views.logpage, name="logpage"),
+    
     path("registration/", views.registerpage, name= "registration"),
     path("hotelrooms/", views.hotelroomspage, name= "hotelrooms"),
     path("delete/", views.deletepage, name="delete"),
+    path('info/', views.info, name="info"),
     
     path("admin-add/", views.addadmin, name="addadmin"),
     path("admin-schadule/", views.schedule, name="schadule"),
     path("admin-register-list/", views.registlist, name="register-list"),
+    
+    path("log/", views.logpage, name="logpage"),
+    path("logout/", views.logout, name="logout"),
+
     
     path("", include("auth_system.urls"))
 

@@ -1,7 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 
-{% block title %}Home{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'createpage' %}"> Make Account</a></li>
 
-{% block content %}
-    <h1 class="red-header">Welcome to Home Page</h1>
-{% endblock %}
+                <li><a href="{% url 'logpage' %}">Log In</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="red-header">Welcome to Hazbin Hotel: The Hottest Destination in Hell</h1>
+        <p>**Where Eternal Torment Meets Eternal Comfort**</p>
+        <p>Abandon all hope, ye who enter here... and check-in to the most unforgettable hotel experience in the underworld! Hazbin Hotel is the premier destination for demons, damned souls, and the occasional mortal looking for a truly hellish getaway.</p>
+        <p>**Indulge in the Fiery Luxuries of the Damned**</p>
+        <p>Our hotel offers a range of infernal amenities, from burning beds to screaming showers, and a staff of demonic hospitality experts who will make sure your stay is a living nightmare. Whether you're looking for a romantic evening in the pit of despair or a family vacation in the lake of fire, we've got you covered.</p>
+        <p>**Book Your Eternal Stay Today!**</p>
+        <p>So why wait? Check-in to Hazbin Hotel and experience the ultimate in hellish hospitality. And don't worry, you'll never want to leave... because you can't.</p>
+    </main>
+    <footer>
+        <p color="red">Hazbin Hotel, always welcome ^_^&copy;2024</p>
+
+    </footer>
+</body>
+</html>
+
