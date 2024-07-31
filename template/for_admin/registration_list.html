@@ -1,6 +1,34 @@
 {% extends 'base_admin.html' %}
 
 {% block content %}
-  <h1>Registrations</h1>
+  <h1 class="red-header">Registrations</h1>
+    
+
+  <table>
+    <thead style="color:rgb(247, 245, 206);">
+      <tr>
+        <th>Client</th>
+        <th>Administration</th>
+        <th>Hotel Room</th>
+        <th>Start Date/Time</th>
+        <th>End Date/Time</th>
+      </tr>
+    </thead>
+    <tbody style="color:rgb(127, 249, 249);">
+      {% for registration in registrations %}
+      <tr>
+        <td>{{ registration.client.name }}</td>
+        <td>{{ registration.administration.name }}</td>
+        <td>{{ registration.hotelroom.room_number }}</td>
+        <td>{{ registration.start_date_time }}</td>
+        <td>{{ registration.end_date_time }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5">No registrations found.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
   
 {% endblock %}

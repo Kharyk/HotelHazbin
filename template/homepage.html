@@ -12,15 +12,16 @@
     <header>
         <nav>
             <ul>
-                <li><a href="{% url 'createpage' %}"> Make Account</a></li>
+                <button class="btn" onclick="location.href='{% url 'createpage' %}'">Make Account </button>
+                <button class="btn" onclick="location.href='{% url 'logpage' %}'">Log In </button>
 
-                <li><a href="{% url 'logpage' %}">Log In</a></li>
 
             </ul>
         </nav>
     </header>
     <main>
-        <h1 class="red-header">Welcome to Hazbin Hotel: The Hottest Destination in Hell</h1>
+        <h1 class="red-header">Welcome to Hazbin Hotel: </h1>
+        <h2 class="red-header">The Hottest Destination in Hell</h2>
         <p>**Where Eternal Torment Meets Eternal Comfort**</p>
         <p>Abandon all hope, ye who enter here... and check-in to the most unforgettable hotel experience in the underworld! Hazbin Hotel is the premier destination for demons, damned souls, and the occasional mortal looking for a truly hellish getaway.</p>
         <p>**Indulge in the Fiery Luxuries of the Damned**</p>

@@ -14,9 +14,10 @@
         <nav>
             <ul>
                 <li><a href="{% url 'registration' %}">Register</a></li>
+                <li><a href="{% url 'delete' %}">Delete</a></li>
                 <li><a href="{% url 'hotelrooms' %}">Hotel Rooms</a></li>
                 <li><a href="{% url 'info' %}">Info</a></li>
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <button class="btn" onclick="location.href='{% url 'logout' %}'">Log Out</button>
 
             </ul>
         </nav>

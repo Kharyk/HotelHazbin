@@ -11,8 +11,12 @@
 <body>
     <main>
         {% block content %}
-        <h1>Log In</h1>
-        <form>
+        <h1 class="red-header">Log In</h1>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
             <br><br>
@@ -20,9 +24,8 @@
             <input type="password" id="password" name="password">
             <br><br>
             <button class="btn">
-                <a href="{% url 'hotelrooms' %}">Log In &raquo; Hotel Rooms</a>
-            </button> 
-    
+                <a href="{% url 'hotelrooms' %}">Log In </a>
+            </button>
         </form>
         {% endblock %}
     </main>

@@ -1,17 +1,27 @@
 {% extends 'base_admin.html' %}
 
-{% block content %}
-    <h1>Schedule </h1>
-    <form method="get">
-        <!--<ul>
-            {% for schedule in schedules %}
-              <li>
-                {{ schedule.day_time }} 
-                {{ schedule.administration }}
-                
-              </li>
-            {% endfor %}
-        </ul> -->
-    </form>
+<header>    
+  <h1>Schedule </h1>
+</header>
+  <main>
+    {% block content %}
+        <h1 class="red-header">Add Schedule</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="administration">administration Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="day_time">Day_time:</label>
+            <input type="datetime-local" id="day_time" name="day_time"><br><br>
+            <label for="end_time">Day_time:</label>
+            <input type="datetime-local" id="end_time" name="end_time"><br><br>
+            <button type="submit" class="btn">Submit</button>
+
+
+        </form>
+    {% endblock %}
+</main>
+<footer>
+    <p color="red">Hazbin Hotel, always welcome ^_^&copy;2024</p>
+
+</footer>
   
-{% endblock %}

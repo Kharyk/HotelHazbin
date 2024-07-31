@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #333;
-    color: #00FFFF;
+    color: #d90000;
     padding: 1em;
     text-align: center;
 }
@@ -43,9 +43,21 @@ h1 {
     color: #00FFFF;
 }
 p{
-    color:#00FFFF
+    color:#00FFFF;
 }
 
+th{
+    color:#00FFFF;
+}
+
+td{
+    color:#36ffff
+}
+
+.right-align {
+    float: right;
+    list-style: none;
+}
 .red-header {
     color: #FF3737;
 }

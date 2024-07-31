@@ -1,5 +1,8 @@
 from django.db import models
 
+from datetime import datetime, timedelta
+from django.db.models import F, ExpressionWrapper, DateTimeField
+
 class Client(models.Model):
     ACCOUNT_TYPES = (
         ('personal', 'Personal'),
@@ -8,6 +11,7 @@ class Client(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     account_type = models.CharField(max_length=10, choices=ACCOUNT_TYPES, default='personal')
+    password = models.CharField(max_length=40, null=False)
 
 class Administration(models.Model):
     name = models.CharField(max_length=100)
@@ -21,6 +25,8 @@ class HotelRooms(models.Model):
 
 class Schedule(models.Model):
     day_time = models.DateTimeField()
+    end_time = models.DateTimeField(null=False)
+    #end_of_work = ExpressionWrapper(F('day_time') + timedelta(hours=8), output_field=DateTimeField())
     administration = models.ForeignKey(Administration, on_delete=models.CASCADE, related_name="schedules")
 
 class Registration(models.Model):

@@ -15,8 +15,8 @@
                 <li><a href="{% url 'addadmin' %}">Make Account</a></li>
                 <li><a href="{% url 'register-list' %}">Registration List</a></li>
 
-                <li><a href="{% url 'logpage' %}">Log In</a></li>
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <!--<li><a href="{% url 'logpage' %}">Log In</a></li> -->
+                <button class="btn" onclick="location.href='{% url 'logout' %}'">Log Out</button>
 
 
             </ul>

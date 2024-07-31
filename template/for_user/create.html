@@ -11,7 +11,7 @@
 <body>
     <main>
         {% block content %}
-            <h1>Make Account</h1>
+            <h1 class="red-header">Make Account</h1>
             <form method="post">
                 {% csrf_token %}
                 <label for="name">Account Name:</label>
@@ -23,7 +23,12 @@
                     <option value="personal">Personal</option>
                     <option value="business">Business</option>
                 </select><br><br>
-                <button class="btn">Submit</button>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <button class="btn">
+                    <a href="{% url 'hotelrooms' %}">Create Account</a>
+                </button>
+
 
             </form>
         {% endblock %}

@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Delete Registration</h1>
-  <p>Are you sure you want to delete this registration?</p>
+  <h1 class="red-header">Delete Registration</h1>
+  <p>Enter your name to delete your registration:</p>
   <form method="post">
     {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <p>Are you certain you wish to cancel your registration?</p>
+    <p>This action is irreversible and will result in the permanent deletion of your registration record.</p>
     <button class="btn">Delete</button>
-
   </form>
 {% endblock %}
