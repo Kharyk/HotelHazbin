@@ -72,6 +72,7 @@ def registerpage(request):
 
 @login_required
 def hotelroomspage(request):
+    #зробити додтупний, недоступний
     return render(request, 'for_user/hotelrooms.html')
 
 @login_required
@@ -98,6 +99,8 @@ def addadmin(request):
 
 @login_required
 def schedule(request):
+    schedules = Schedule.objects.all()
+
     if request.method == "POST":
         administration_name = request.POST.get("name")
         administration = Administration.objects.get(name=administration_name)
@@ -107,7 +110,7 @@ def schedule(request):
             administration=administration,
         )
         schedule.save()
-    return render(request, "for_admin/schedule.html")
+    return render(request, "for_admin/schedule.html", {'schedules':schedules})
 
 @login_required
 def registlist(request):

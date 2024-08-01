@@ -3,17 +3,43 @@
 <header>    
   <h1>Schedule </h1>
 </header>
+
   <main>
     {% block content %}
+
+    <table>
+      <thead style="color:rgb(183, 25, 25);">
+        <tr>
+          <th>Day / Time</th>
+          <th>End of work time</th>
+          <th>Administration</th>
+        </tr>
+      </thead>
+      <tbody style="color:rgb(249, 127, 127);">
+        {% for schedule in schedules %}
+        <tr>
+          <td>{{ schedule.day_time }}</td>
+          <td>{{ schedule.end_time }}</td>
+          <td>{{ schedule.administration.name }}</td>
+    
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5">No registrations found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
         <h1 class="red-header">Add Schedule</h1>
         <form method="post">
             {% csrf_token %}
             <label for="administration">administration Name:</label>
             <input type="text" id="name" name="name"><br><br>
             <label for="day_time">Day_time:</label>
-            <input type="datetime-local" id="day_time" name="day_time"><br><br>
+            <input type="datetime-local" id="day" name="day_time"><br><br>
             <label for="end_time">Day_time:</label>
-            <input type="datetime-local" id="end_time" name="end_time"><br><br>
+            <input type="datetime-local" id="end" name="end_time"><br><br>
             <button type="submit" class="btn">Submit</button>
 
 
